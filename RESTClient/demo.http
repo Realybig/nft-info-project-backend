@@ -1,0 +1,9 @@
+POST http://127.0.0.1:3000/hc/additem
+Content-Type: application/json
+
+{
+    "name": "鹿在朝",
+    "nums": "200",
+    "hasActivity": false,
+    "hasSynthetic": 0
+}
