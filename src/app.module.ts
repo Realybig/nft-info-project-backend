@@ -16,6 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       retryDelay: 500,
       // 重试次数
       retryAttempts: 10,
+      // synchronize: true
     }),
     HcModule,
   ],

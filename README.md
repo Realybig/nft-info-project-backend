@@ -119,6 +119,52 @@ application/type=json
 }
 ```
 
+
+## TypeORM 安装及配置
+
+```bash
+# TypeORM 安装及 MySQL 扩展安装
+pnpm install @nestjs/typeorm typeorm mysql2
+```
+
+配置 TypeORM
+
+```ts
+// app.module.ts
+// 引入 typeORM 模块
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+@Module({
+  imports: [
+    // 配置 TypeORM 
+    TypeOrmModule.forRoot({
+      // 数据库类型
+      type: 'mysql',
+      // 数据库地址
+      host: 'localhost',
+      // 数据库端口
+      port: 3306,
+      // 用户名
+      username: '',
+      // 密码
+      password: '',
+      // 数据库名称
+      database: 'nft-info',
+      // 重试链接数据库间隔
+      retryDelay: 500,
+      // 重试次数
+      retryAttempts: 10,
+      // synchronize: true
+    }),
+    HcModule,
+  ],
+  controllers: [],
+  providers: [],
+})
+```
+
+
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
