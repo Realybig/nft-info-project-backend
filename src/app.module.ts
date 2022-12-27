@@ -16,7 +16,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       retryDelay: 500,
       // 重试次数
       retryAttempts: 10,
-      // synchronize: true
+      // 是否将实体同步到数据库
+      synchronize: true,
+      // 是否自动加载实体
+      autoLoadEntities: true,
     }),
     HcModule,
   ],
