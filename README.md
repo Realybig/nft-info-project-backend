@@ -163,6 +163,22 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 })
 ```
 
+### TypeORM 中的实体 Entities
+
+> ORM 中的实体其实就是把数据库映射成对象的那个类，这个类可以模拟数据库表，定义其中的字段。
+
+因为映射的过程 `ORM` 已经为我们做好了，所以我们只需要定义实体类，当实体类定义好以后，就可以操作数据库了，这里所谓的实体就是 `Object`
+
+
+```mermaid
+flowchart TD;
+     A-->B;
+     A-->C;
+     B-->D;
+     C-->D;
+```
+
+
 
 
 ## Description
